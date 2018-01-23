@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>
+    简单的评分功能
+  </title>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <style>
+    .score_wrapper {
+      font-size: 45px;
+      cursor: pointer;
+      color: #dc2020;
+    }
+  </style>
+</head>
+
+<body>
+  <span class="score_wrapper"></span>
+  <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+  <script>
+    $(function () {
+      ScoreInit(3); //初始化，参数是0～5的数字，代表星数，传空默认0颗星
+    })
+    //点击
+    function ScoreInit(e) {
+      Score((e == null) ? 0 : e);
+      $(".score_wrapper").bind('click', function (e) {
+        var eachWidth = $(".score_wrapper").width() / 5;
+        var X = e.pageX - $(this).offset().left;
+        var score = Math.floor(X / eachWidth) + 1;
+        Score(score);
+      })
+    }
+    //评分
+    function Score(rate) {
+      $(".score_wrapper").html("★★★★★☆☆☆☆☆".slice(5 - rate, 10 - rate));
+    }
+  </script>
+</body>
+
+</html>
