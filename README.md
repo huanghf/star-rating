@@ -27,21 +27,21 @@
 
 ### javascript
 ```javascript
-    $(function () {
-      ScoreInit(3); //初始化，参数是0～5的数字，代表星数，传空默认0颗星
-    })
-    //点击
-    function ScoreInit(e) {
-      Score((e == null) ? 0 : e);
-      $(".score_wrapper").bind('click', function (e) {
-        var eachWidth = $(".score_wrapper").width() / 5;
-        var X = e.pageX - $(this).offset().left;
-        var score = Math.floor(X / eachWidth) + 1;
-        Score(score);
-      })
-    }
-    //评分
-    function Score(rate) {
-      $(".score_wrapper").html("★★★★★☆☆☆☆☆".slice(5 - rate, 10 - rate));
-    }
+$(function() {
+  ScoreInit(3); //初始化，参数是0～5的数字，代表星数，传空默认0颗星
+})
+//点击
+function ScoreInit(e) {
+  Score((e == null) ? 0 : e);
+  $(".score_wrapper").bind('click', function(e) {
+    var eachWidth = $(".score_wrapper").width() / 5; //计算出每个星星的长度
+    var X = e.pageX - $(this).offset().left; //距离父容器的偏移距离
+    var score = Math.floor(X / eachWidth) + 1;
+    Score(score);
+  })
+}
+//评分
+function Score(rate) {
+  $(".score_wrapper").html("★★★★★☆☆☆☆☆".slice(5 - rate, 10 - rate));
+}
 ```
