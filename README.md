@@ -1,10 +1,11 @@
-# star-rating
 ## 实现原理
 ![](https://ws4.sinaimg.cn/large/006tKfTcgy1fnqvphubb8j30lu0dodhh.jpg)
 ## Link
-- demo
-- github
+- [demo](https://zc95.github.io/2018/01/23/star-rating/)
+- [github](https://github.com/zc95/star-rating)
 
+
+<!-- more -->
 ## 主要代码
 ### css
 ```css
@@ -45,3 +46,4 @@ function Score(rate) {
   $(".score_wrapper").html("★★★★★☆☆☆☆☆".slice(5 - rate, 10 - rate));
 }
 ```
+
