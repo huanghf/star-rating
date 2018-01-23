@@ -44,6 +44,7 @@ function ScoreInit(e) {
 //评分
 function Score(rate) {
   $(".score_wrapper").html("★★★★★☆☆☆☆☆".slice(5 - rate, 10 - rate));
+  // 或者： "★".repeat(rate) + "☆".repeat(5-rate);
 }
 ```
 
