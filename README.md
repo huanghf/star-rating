@@ -1,7 +1,7 @@
 ## 实现原理
 ![](https://ws4.sinaimg.cn/large/006tKfTcgy1fnqvphubb8j30lu0dodhh.jpg)
 ## Link
-- [demo](https://zc95.github.io/2018/01/23/star-rating/)
+- [demo](https://htmlpreview.github.io/?https://github.com/zc95/star-rating/blob/master/index.html)
 - [github](https://github.com/zc95/star-rating)
 
 
